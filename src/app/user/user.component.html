@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="row">
+   <div class="input-field col s12 m4">
+    <input id="user_code" name="user_code" type="text" [(ngModel)]="userCode">
+    <label for="user_code">User Code</label>
+  </div>
+  </div>
+<div class="row">
+   <div class="input-field col s6 m4" >
+    <input id="user_name" name="user_name" type="text" [(ngModel)]="userName">
+    <label for="user_name">Username</label>
+  </div>
+   <div class="input-field col s6 m4 ">
+    <input id="user_password" name="user_password" type="password" [(ngModel)]="userPassword">
+    <label for="user_password">Password</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6 m4">
+    <input id="user_fname" name="user_fname" type="text" [(ngModel)]="userFname">
+    <label for="user_fname">FirstName</label>
+  </div>
+    <div class="input-field col s6 m4">
+    <input id="user_lname" name="user_lname" type="text" [(ngModel)]="userLname">
+    <label for="user_lname">LastName</label>
+  </div>
+ </div>
+<div class="row">
+  <div class="row">
+   <div class="input-field col s12 m4">
+    <input id="user_type" name="user_type" type="text" [(ngModel)]="userType">
+    <label for="user_type">User Type</label>
+  </div>
+  </div>
+  <a class="btn col s12" (click)="onSave();">save</a>
+
+  </div>
+  

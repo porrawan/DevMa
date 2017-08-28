@@ -1,0 +1,19 @@
+<div class="row login-box">
+  <div class="col s12 m4 offset-m4 center">
+    <img src="/assets/LogoDev.jpg">
+  </div>
+  <div class="input-field col s12 m4 offset-m4">
+   <i class="material-icons prefix  blue-grey-text text-darken-4">account_circle</i> 
+    <input id="email" name="email" [(ngModel)]="email" type="email" class="validate" placeholder="please input your email">
+    <label for="email" data-error="please input valid emails">Email</label>
+
+  </div>
+  <div class="input-field col s12 m4 offset-m4">
+    <i class="material-icons prefix blue-grey-text text-darken-4">lock</i>
+    <input id="password" name="password" [(ngModel)]="password" type="password" class="validate" pattern="\d{3,8}" placeholder="please input your password">
+   <label for="passord" >Password</label>
+  <a class="waves-effect waves-light btn col s12 offset-s0" (click)="doLogin()">Login</a>
+  </div>
+<h1>{{email}}</h1>
+<h1>{{password}}</h1>
+</div>

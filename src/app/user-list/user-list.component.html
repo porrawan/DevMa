@@ -1,0 +1,56 @@
+<nav>
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field">
+        <input id="search" name="search" type="search" required [(ngModel)]="searchText">
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons" (click)="search()">find_in_page</i>
+      </div>
+    </form>
+  </div>
+</nav>
+<table>
+  <thead>
+    <tr>
+      <th>Edit</th>
+       <th>User Code</th>
+      <th>Username</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>UserType</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of userData; let i = index">
+      <td>
+        <a class="btn-floating btn waves-effect waves-light blue darken-3">
+              <i class="material-icons">mode_edit</i>
+              </a>
+      </td>
+      <td>{{user.userCode}}</td>
+      <td>{{user.userName}}</td>
+      <td>{{user.userFname}}</td>
+      <td>{{user.userLname}}</td>
+      <td>{{user.userType}}</td>
+
+      <td>
+        <a class="btn-floating btn waves-effect waves-light red">
+               <i class="material-icons">delete</i>
+               </a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<ul class="pagination">
+  <li class="waves-effect" *ngFor="let p of paging;let i=index;" [ngClass]="{'active' : i == numPage}" (click)="gotoPage(i);">
+    <a>{{p}}</a></li>
+</ul>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn waves-effect waves-light blue darken-3" (click)="onAddButtonClick()">
+     <i class="material-icons">add</i>
+ </a>
+</div>
